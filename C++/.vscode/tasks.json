@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build-mysql-cpp",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-IC:/mysql-connector-c++/include",
+        "-LC:/mysql-connector-c++/lib64",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.exe",
+        "-lmysqlcppconn10"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Build with MySQL Connector C++ 10"
+    }
+  ]
+}
