@@ -1,0 +1,83 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: hsl(0,8%,78%);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem ;
+}
+#WeatherForm{
+    margin: 20px;
+}
+
+.input-style{
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius:10px ;
+    margin: 10px;
+    width: 300px;
+}
+
+button[type="submit"]{
+    padding: 18px 18px ;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    background-color: rgb(3, 131, 41);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    transition: 1.5s ease;
+}
+
+button[type="submit"]:hover{
+    padding: 15px 15px ;
+
+    background-color: rgb(85, 201, 120);
+    color: black;
+    border: 2px solid white;
+    box-shadow: 2px 3px rgb(52, 53, 52);
+}
+
+.content{
+    margin-top: 10px;
+    background: linear-gradient(180deg,rgb(25, 25, 83),rgb(240, 169, 38));
+    padding: 50px;
+    box-shadow: 2px 2px 5px 5px hsl(0,0%,0%,0.5);
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    border-radius:3px ;
+}
+h1{
+    font-size: 3.5rem;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+p{
+    font-size: 1.5rem;
+    margin: 5px 0;
+    
+}
+
+.Temperature{
+    font-size: 3.5rem;
+    font-weight: bolder;
+    margin-bottom: 25px;
+}
+.humidityDis{
+    font-weight: bolder;
+    margin-bottom: 25px;
+}
+
+.ErrorDis{
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-bottom: 25px;
+    color: red;
+}
