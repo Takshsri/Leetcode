@@ -10,7 +10,7 @@ class Node{
         Node* left;
         Node* right;
         Node(int val){
-            data= val;
+            this->data= val;
             left=right=NULL;
         }
 };
