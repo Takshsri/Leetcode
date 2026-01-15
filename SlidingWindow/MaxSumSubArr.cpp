@@ -56,9 +56,23 @@ int SubArray(vector<int> &a,int k){
     return CurrSum;
 
 }
+int Sum(vector<int> &a,int target){
+    if(a.empty()) return -1;
+    int sum =0,mini = INT_MAX,start = 0;
+    for(int i=0;i<a.size();i++){
+        sum += a[i];
+        while(sum>=target){
+            mini = min(mini,i-start+1);
+            sum-= a[start++];
+        }
+    }
+            return (mini == INT_MAX) ? -1 : mini;
+
+}
+
 int main(){
-    vector<int> a = {2,4,5,6,7,8,9};
-    int k = 4;
-    cout<<SubArray(a,k)<<endl;
-    cout<<"Average of SubArray:"<<SubArray(a,k)/k;
+    vector<int> a = {4,2,5,-1,3,2,2};
+    int k = 10;
+    cout<<Sum(a,k)<<endl;
+    //cout<<"Average of SubArray:"<<SubArray(a,k)/k;
 }
